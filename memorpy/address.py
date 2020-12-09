@@ -93,7 +93,7 @@ class Address(object):
         return str(
             "<Addr: %s" % self.symbolic_name
             + ' : "%s" (%s)>'
-            % (str(self.read()).encode("string_escape"), self.default_type)
+            % (str(self.read()).encode("unicode_escape"), self.default_type)
         )
 
     def __int__(self):
