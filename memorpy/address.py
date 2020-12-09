@@ -99,6 +99,11 @@ class Address(object):
     def __int__(self):
         return int(self.value)
 
+    # https://stackoverflow.com/questions/59218885/hex-method-giving-error-when-used-with-custom-object
+    # https://stackoverflow.com/questions/59116578/overriding-hex-in-python-3
+    def __index__(self):
+        return int(self.value)
+
     def __hex__(self):
         return hex(self.value)
 
